@@ -2,7 +2,7 @@ import tensorflow as tf
 tf.set_random_seed(777)  # for reproducibility
 
 filename_queue = tf.train.string_input_producer(
-    ['data-01-test-score.csv'], shuffle=False, name='filename_queue')
+    ['rootkey.csv'], shuffle=False, name='filename_queue')
 
 reader = tf.TextLineReader()
 key, value = reader.read(filename_queue)
